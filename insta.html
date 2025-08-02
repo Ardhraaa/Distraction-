@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Instagram Fake Page</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: black;
+      overflow: hidden;
+    }
+
+    /* Fullscreen Instagram-like Image */
+    .fullscreen-img {
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    /* Judgmental Popup */
+    .judgment-popup {
+      position: absolute;
+      top: 50%;
+      right: -100%;
+      transform: translateY(-50%);
+      background: rgba(16, 17, 79, 0.85);
+      padding: 20px 30px;
+      color: white;
+      font-size: 1.5rem;
+      font-weight: bold;
+      border-radius: 10px 0 0 10px;
+      z-index: 2;
+      animation: slideIn 1.2s ease-out 0.8s forwards;
+    }
+
+    @keyframes slideIn {
+      to {
+        right: 0;
+      }
+    }
+
+    /* Optional: Back Button */
+    .back-btn {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 1rem;
+      color: white;
+      text-decoration: none;
+      background: rgba(0,0,0,0.5);
+      padding: 8px 12px;
+      border-radius: 5px;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Fake Instagram Fullscreen Image -->
+  <img src="assets/insta.png" alt="Instagram Mock Image" class="fullscreen-img" />
+
+  <!-- Judgmental Popup -->
+  <div class="judgment-popup">
+    <img src="assets/stop.jpg" alt="Stop Sign" class="popup-img" />
+    <div class="popup-text">KYU NAHI HO RAHI PADHAI?? </div>
+  </div>
+  
+
+  <!-- Optional back to landing -->
+  <a class="back-btn" href="index.html">⬅ Go Back</a>
+
+  <!-- Optional: Judgmental Sound -->
+  <audio autoplay>
+    <source src="assets/pop.mp3" type="audio/mpeg" />
+    Your browser doesn't support audio.
+  </audio>
+
+</body>
+</html>
+
